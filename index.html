@@ -11,18 +11,18 @@
 <style>
 /* Layout: one long studio page — heat-haze hero, then calm sections on a blush ground; the guide (agent) is the hero's twin, set on deep aubergine. */
 :root{
-  --bg:#FBF5F2;
+  --bg:#F6F5F2;
   --surface:#FFFFFF;
-  --sunk:#F4EAE6;
-  --ink:#2A1630;
-  --muted:#6E5A70;
-  --line:#E6D6D3;
-  --ember:#D23E5A;
-  --saffron:#EFA23A;
-  --night:#2A1630;
-  --night-ink:#F9EDEB;
-  --night-muted:#C6AFC2;
-  --night-surface:#3A2241;
+  --sunk:#ECEAE5;
+  --ink:#141111;
+  --muted:#5E5955;
+  --line:#DDD9D2;
+  --ember:#D21F26;
+  --saffron:#F2B705;
+  --night:#0B0909;
+  --night-ink:#F5F2EE;
+  --night-muted:#B5ADA6;
+  --night-surface:#1A1514;
   --ok:#2F7D5B;
   --f-display:"Gloock", "Georgia", "Times New Roman", serif;
   --f-body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -33,14 +33,14 @@
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#170C1A; --surface:#22132A; --sunk:#1D1022; --ink:#F6E9E8; --muted:#BBA4B8; --line:#3A2742;
-    --ember:#F0607A; --saffron:#F4B356; --night:#0F0712; --night-ink:#F9EDEB; --night-muted:#C6AFC2; --night-surface:#24142B; --ok:#5CC296;
+    --bg:#0E0C0C; --surface:#181414; --sunk:#131010; --ink:#F3EFEA; --muted:#ABA39C; --line:#2E2826;
+    --ember:#E5342F; --saffron:#F6C33A; --night:#070505; --night-ink:#F5F2EE; --night-muted:#B5ADA6; --night-surface:#151010; --ok:#5CC296;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#170C1A; --surface:#22132A; --sunk:#1D1022; --ink:#F6E9E8; --muted:#BBA4B8; --line:#3A2742;
-  --ember:#F0607A; --saffron:#F4B356; --night:#0F0712; --night-ink:#F9EDEB; --night-muted:#C6AFC2; --night-surface:#24142B; --ok:#5CC296;
+  --bg:#0E0C0C; --surface:#181414; --sunk:#131010; --ink:#F3EFEA; --muted:#ABA39C; --line:#2E2826;
+    --ember:#E5342F; --saffron:#F6C33A; --night:#070505; --night-ink:#F5F2EE; --night-muted:#B5ADA6; --night-surface:#151010; --ok:#5CC296;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -94,7 +94,7 @@ nav.main a:hover{color:var(--ink);background:var(--sunk)}
 @keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(-6%,-8%) scale(1.15)}}
 .hero .wrap{position:relative;display:grid;gap:26px}
 .hero h1{font-size:clamp(3rem,10vw,7.4rem);max-width:11ch;letter-spacing:-.01em}
-.hero h1 em{font-style:normal;background:linear-gradient(90deg,#F7B95A,#F0607A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#F6C33A,#E5342F);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero .lead{color:var(--night-muted);font-size:1.2rem}
 .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
 .hero .btn-line{color:var(--night-ink)}
@@ -103,7 +103,7 @@ nav.main a:hover{color:var(--ink);background:var(--sunk)}
 
 /* philosophy */
 .philo{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,6vw,80px);align-items:center}
-.philo-art{aspect-ratio:4/5;max-width:100%;border-radius:var(--r);position:relative;overflow:hidden;background:radial-gradient(120% 80% at 30% 20%,#F7B95A 0%,#D23E5A 45%,#4A1E48 100%)}
+.philo-art{aspect-ratio:4/5;max-width:100%;border-radius:var(--r);position:relative;overflow:hidden;background:radial-gradient(120% 80% at 30% 20%,#F2B705 0%,#D21F26 45%,#1A0405 100%)}
 .philo-art svg{position:absolute;inset:0;width:100%;height:100%}
 .philo .lead{margin-top:18px}
 .pillars{display:grid;gap:14px;margin-top:28px}
@@ -131,7 +131,7 @@ nav.main a:hover{color:var(--ink);background:var(--sunk)}
 .guide-notes span{font-family:var(--f-mono);color:var(--saffron)}
 .chat{background:var(--night-surface);border:1px solid color-mix(in srgb,var(--night-ink) 12%,transparent);border-radius:20px;display:flex;flex-direction:column;min-width:0;overflow:hidden}
 .chat-head{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid color-mix(in srgb,var(--night-ink) 10%,transparent)}
-.avatar{width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#F7B95A,#D23E5A 60%,#6B2357);flex:none;box-shadow:0 0 0 4px color-mix(in srgb,#F0607A 18%,transparent)}
+.avatar{width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#F6C33A,#D21F26 60%,#4A080C);flex:none;box-shadow:0 0 0 4px color-mix(in srgb,#E5342F 22%,transparent)}
 .chat-head b{display:block;font-weight:600}
 .chat-head small{color:var(--night-muted);font-size:.82rem}
 .progress{margin-left:auto;font-family:var(--f-mono);font-size:.78rem;color:var(--night-muted)}
@@ -425,9 +425,9 @@ footer a:hover{color:var(--night-ink)}
       <h2>Ceux qui vous guident</h2>
     </div>
     <div class="team">
-      <div class="member"><div class="portrait" style="background:linear-gradient(160deg,#EFA23A,#D23E5A)" aria-hidden="true">M</div><h3>Marie-Louise</h3><p>Spécialiste du Yinflow et du Yoga du Rire</p></div>
-      <div class="member"><div class="portrait" style="background:linear-gradient(160deg,#D23E5A,#6B2357)" aria-hidden="true">T</div><h3>Thomas</h3><p>Expert du Hatha et du Coreflow</p></div>
-      <div class="member"><div class="portrait" style="background:linear-gradient(160deg,#8B2E6B,#2A1630)" aria-hidden="true">J</div><h3>Julianne</h3><p>Guide de la Philosophie Prana</p></div>
+      <div class="member"><div class="portrait" style="background:linear-gradient(160deg,#F2B705,#D21F26)" aria-hidden="true">M</div><h3>Marie-Louise</h3><p>Spécialiste du Yinflow et du Yoga du Rire</p></div>
+      <div class="member"><div class="portrait" style="background:linear-gradient(160deg,#D21F26,#3A0609)" aria-hidden="true">T</div><h3>Thomas</h3><p>Expert du Hatha et du Coreflow</p></div>
+      <div class="member"><div class="portrait" style="background:linear-gradient(160deg,#5A0A0E,#0B0909)" aria-hidden="true">J</div><h3>Julianne</h3><p>Guide de la Philosophie Prana</p></div>
     </div>
   </div>
 </section>
